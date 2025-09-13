@@ -97,7 +97,19 @@ export default function Login({ onLogin }) {
               Sign In
             </button>
           </form>
+
+          {/* Additional Options */}
+          <div className="mt-6 pt-6 border-t border-slate-200">
+            <div className="text-sm text-center">
+                          Test accounts:
+                admin@acme.test, user@acme.test,
+                admin@globex.test, user@globex.test
+                (password: password)
+            </div>
+          </div>
         </div>
+
+        {/* Footer */}
 
       </div>
     </div>
