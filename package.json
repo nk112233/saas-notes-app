@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "seed": "node seed.js"
+    "start": "node api/index.js",
+    "dev": "nodemon api/index.js",
+    "seed": "node api/seed.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",

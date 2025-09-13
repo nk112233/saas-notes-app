@@ -6,7 +6,7 @@ const Tenant = require('./models/Tenant');
 const User = require('./models/User');
 const Note = require('./models/Note');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/notes_saas';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function seed() {
   await mongoose.connect(MONGODB_URI);
