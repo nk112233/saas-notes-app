@@ -166,7 +166,7 @@ export default function Notes({ onLogout }) {
           <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-6 mb-8">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-              <h2 className="text-xl font-bold text-slate-800">Invite Team Member</h2>
+              <h2 className="text-xl font-bold text-slate-800">Invite Team Member <span className="text-sm font-light">(Default Password : "password")</span></h2>
             </div>
             <div className="flex flex-wrap gap-3 items-end">
               <div className="flex-1 min-w-[200px]">
