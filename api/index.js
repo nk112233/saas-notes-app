@@ -19,6 +19,9 @@ app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/auth', authRoutes);
 app.use('/tenants', tenantRoutes);
 app.use('/notes', notesRoutes);
+app.get('/health' , (req , res) => {
+  res.json({ "status": "ok" });
+})
 
 // global error handler
 app.use((err, req, res, next) => {
