@@ -2,11 +2,6 @@
 
 A full-stack web application for securely managing your personal notes.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-None-red) ![Stars](https://img.shields.io/github/stars/nk112233/saas-notes-app?style=social) ![Forks](https://img.shields.io/github/forks/nk112233/saas-notes-app?style=social)
-
-![SaaS Notes App Preview](/preview_example.png)
-
-
 ## ✨ About the Project
 
 The `saas-notes-app` is a comprehensive web application designed to provide users with a secure and intuitive platform for creating, organizing, and managing their notes. Built with a robust JavaScript-based backend (Node.js, Express, MongoDB) and a dynamic frontend (HTML, CSS, JavaScript), it offers a seamless experience for personal information management with a focus on user authentication and data persistence.
@@ -54,14 +49,16 @@ Ensure you have the following installed on your system:
 
     ```ini
     # Example .env content
-    PORT=5000
-    MONGO_URI=mongodb://localhost:27017/saasnotes
-    JWT_SECRET=your_jwt_secret_key_here
+    PORT=4000
+    MONGODB_URI="your_mongodb_connection_string"
+    JWT_SECRET="your_jwt_secret_key"
+    JWT_EXPIRES_IN="7d"
     ```
 
     *   `PORT`: The port for the backend server.
     *   `MONGO_URI`: Your MongoDB connection string.
     *   `JWT_SECRET`: A strong, random string for signing JWTs.
+    *   `JWT_EXPIRES_IN`: Expiry of JWT token.
 
 3.  **Backend Setup (API):**
 
@@ -73,7 +70,7 @@ Ensure you have the following installed on your system:
     npm start
     ```
 
-    The backend server should now be running, typically on `http://localhost:5000` (or your specified `PORT`).
+    The backend server should now be running, typically on `http://localhost:4000` (or your specified `PORT`).
 
 4.  **Frontend Setup:**
 
@@ -82,23 +79,20 @@ Ensure you have the following installed on your system:
     ```bash
     cd ../frontend
     npm install
-    npm start
+    npm run dev
     ```
 
-    The frontend application should now be running, typically on `http://localhost:3000`.
+    The frontend application should now be running, typically on `http://localhost:5173`.
 
 
 ## 💡 Usage Examples
 
 Once both the backend and frontend servers are running, you can access the application in your web browser.
 
-1.  **Access the Application:** Open your browser and navigate to `http://localhost:3000`.
-2.  **Register:** Create a new user account with a unique email and password.
+1.  **Access the Application:** Open your browser and navigate to `http://localhost:5173`.
 3.  **Login:** Log in with your registered credentials.
 4.  **Manage Notes:** Start creating, editing, and deleting your personal notes from the user dashboard.
 
-![[placeholder-screenshot-of-app-dashboard]](/usage_dashboard.png)
-_Screenshot: Example of the user dashboard for managing notes._
 
 
 ## 🗺️ Project Roadmap
